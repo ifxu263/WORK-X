@@ -1,0 +1,143 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #2F2F44 60%, #5F286B 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+/* ==== NAVBAR ==== */
+nav {
+  width: 100%;
+  background: linear-gradient(120deg, #2F2F44 60%, #5F286B 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0 8px 0;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+nav .logo,
+nav .brand {
+  font-size: 2.1rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-shadow: 0px 2px 15px #ff3c8989;
+}
+
+nav .finder,
+nav .pink {
+  color: #ff3c89;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links a {
+  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.18s;
+}
+
+.nav-links a:hover {
+  color: #ff3c89;
+}
+
+.login-btn {
+  border: 2px solid #ff3c89;
+  color: #ff3c89;
+  background: transparent;
+  border-radius: 10px;
+  padding: 7px 28px;
+  margin-top: 14px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.23s, color 0.18s;
+  outline: none;
+}
+
+.login-btn:hover {
+  background: #ff3c89;
+  color: #fff;
+}
+
+/* ==== MEDIA QUERY ==== */
+@media (min-width: 700px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 54px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 28px;
+    width: auto;
+  }
+
+  .login-btn {
+    margin-top: 0;
+    margin-left: 36px;
+    padding: 7px 38px;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(270deg, #e0c3fc, #000000);
+  background-size: 600% 600%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 1rem;
+  background-color: #7b2cbf;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.page-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* RESET */

@@ -1,0 +1,172 @@
+/* Login.css */
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #1f1c2c, #928DAB, #1f1c2c);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  perspective: 1000px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card {
+  width: 360px;
+  min-height: 380px;
+  max-width: 98vw;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(.4, 2, .6, 1.2);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  min-height: 380px;
+  height: auto;
+  background:
+    linear-gradient(135deg, #232329 62%, #38384b 100%),
+    #141414;
+  color: #fff;
+  border-radius: 18px;
+  padding: 32px 26px 28px 26px;
+  box-shadow: 0 6px 48px 0 rgba(30, 24, 99, 0.09);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  animation: fadeInCard 1s cubic-bezier(.53, 1.7, .53, .9);
+}
+
+.card-front {
+  z-index: 2;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-face h2 {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.card-face input {
+  margin: 9px 0;
+  padding: 13px 14px;
+  border: none;
+  border-radius: 11px;
+  font-size: 1rem;
+  background: #fff;
+  color: #442a64;
+  font-weight: 500;
+  outline: none;
+  box-shadow: 0 2px 10px #9452cb12;
+  transition: box-shadow 0.13s;
+}
+
+.card-face input:focus {
+  box-shadow: 0 0 0 2px #ff3c89;
+  background: #fff;
+}
+
+.card-face button {
+  margin-top: 12px;
+  padding: 13px;
+  background: linear-gradient(90deg, #ff3c89, #8b2efc);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.06rem;
+  transition: background 0.18s, transform 0.13s;
+  box-shadow: 0 4px 24px #ff3c8940;
+  letter-spacing: 1px;
+}
+
+.card-face button:hover {
+  background: linear-gradient(90deg, #8b2efc, #ff3c89);
+  transform: translateY(-2px) scale(1.025);
+}
+
+.card-face p {
+  margin-top: 17px;
+  cursor: pointer;
+  color: #B2A3E2;
+  text-align: center;
+  font-size: 0.97rem;
+  transition: color 0.22s;
+}
+
+.card-face p span {
+  color: #ff3c89;
+  font-weight: 600;
+}
+
+.card-face p:hover span {
+  color: #fff;
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: 99vw;
+    min-height: 390px;
+    max-width: 99vw;
+  }
+  .card-face {
+    padding: 16px 8px 12px 8px;
+    min-height: 300px;
+  }
+  .card-face input,
+  .card-face button {
+    font-size: 0.9rem;
+  }
+}
+
+.login-popup {
+  position: fixed;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  background: #28e696;
+  color: #232329;
+  padding: 14px 38px;
+  border-radius: 18px;
+  font-size: 1.12rem;
+  font-weight: bold;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.52s cubic-bezier(.4, 2, .6, 1.2),
+    transform 0.29s cubic-bezier(.6, .5, 0, 1.4);
+  pointer-events: none;
+  box-shadow: 0 8px 30px rgba(20, 204, 153, 0.32);
+}
+
+.login-popup.show {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}

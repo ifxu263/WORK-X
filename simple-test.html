@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple API Test</title>
+</head>
+<body>
+    <h1>Testing API Connection</h1>
+    <button onclick="testConnection()">Test Connection</button>
+    <button onclick="testSignup()">Test Signup</button>
+    <div id="result"></div>
+
+    <script>
+        async function testConnection() {
+            try {
+                const response = await fetch('http://localhost:5000/api/auth/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: "Test User",
+                        email: "test@example.com",
+                        password: "password123"
+                    })
+                });
+                
+                const data = await response.json();
+                document.getElementById('result').innerHTML = 
+                    `<h3>✅ Success!</h3><pre>${JSON.stringify(data, null, 2)}</pre>`;
+            } catch (error) {
+                document.getElementById('result').innerHTML = 
+                    `<h3>❌ Error</h3><p>${error.message}</p>`;
+            }
+        }
+
+        async function testSignup() {
+            try {
+                const response = await fetch('http://localhost:5000/api/auth/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: "John Doe",
+                        email: "john.doe@testmail.com",
+                        password: "test123456"
+                    })
+                });
+                
+                const data = await response.json();
+                document.getElementById('result').innerHTML = 
+                    `<h3>✅ Signup Success!</h3><pre>${JSON.stringify(data, null, 2)}</pre>`;
+            } catch (error) {
+                document.getElementById('result').innerHTML = 
+                    `<h3>❌ Signup Error</h3><p>${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

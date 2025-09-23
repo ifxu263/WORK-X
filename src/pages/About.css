@@ -1,0 +1,99 @@
+/* About.css */
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #1f1c2c, #928DAB, #1f1c2c);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 2rem;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  max-width: 700px;
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.created-by {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #ff4081;
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.social-links a {
+  color: #ff4081;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Signup API</title>
+</head>
+<body>
+    <h1>Test Signup API</h1>
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button type="submit">Test Signup</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            };
+
+            try {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('result').innerHTML = 
+                        `<h3>✅ Success!</h3><pre>${JSON.stringify(result, null, 2)}</pre>`;
+                } else {
+                    document.getElementById('result').innerHTML = 
+                        `<h3>❌ Error: ${response.status}</h3><pre>${JSON.stringify(result, null, 2)}</pre>`;
+                }
+            } catch (error) {
+                document.getElementById('result').innerHTML = 
+                    `<h3>❌ Network Error</h3><p>${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>
