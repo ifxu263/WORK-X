@@ -1,62 +1,46 @@
-NANDED JOB FINDER
+# WORK-X (Nanded Job Finder)
 
-NANDED JOB FINDER is a web application built with React.js that helps users easily find job opportunities in and around Nanded. The platform provides a modern, responsive interface with search and filter options to quickly locate suitable job listings.
+WORK-X is a modern job portal web application built with **React.js and Node.js** that helps users find job opportunities in and around **Nanded**.  
 
-Features
+The platform allows **job seekers to explore and apply for jobs** while **recruiters can post jobs and manage applicants** through a dedicated dashboard.
 
-🔍 Job Search: Search jobs by title, company, or keywords.
+---
 
-🗂 Filters: Filter jobs based on category, location, or experience level.
+## 🚀 Features
 
-💻 Responsive Design: Fully responsive and mobile-friendly UI.
+### 👨‍💻 For Job Seekers
+- 🔍 Search jobs by title, company, or keywords
+- 📄 View detailed job descriptions
+- 📍 City-based job listings
+- 📝 Apply for jobs directly from the platform
+- ⚡ Fast and responsive user interface
 
-📄 Detailed Job Listings: View detailed information about each job, including company, role, and requirements.
+### 🧑‍💼 For Recruiters
+- 🔐 Recruiter login & registration
+- 📢 Post new job listings
+- 📋 Recruiter dashboard
+- 👥 View applicants for posted jobs
+- 📧 Contact applicants directly via email
 
-⚡ Fast & Modern UI: Built with React for smooth performance and dynamic experience.
+---
 
-Tech Stack
+## 🛠 Tech Stack
 
-Frontend: React.js, HTML5, CSS3
+### Frontend
+- React.js
+- React Router
+- Framer Motion (animations)
+- HTML5
+- CSS3
 
-Design & UI: Custom responsive design
+### Backend
+- Node.js
+- Express.js
 
-Optional Backend: Can be integrated with APIs for live job data
+### Database
+- MongoDB
+- Mongoose
 
-Getting Started
+---
 
-Clone the repository:
-
-git clone https://github.com/ifxu263/NANDED--JOB-FINDER.git
-
-
-Navigate to the project folder:
-
-cd NANDED--JOB-FINDER
-
-
-Install dependencies:
-
-npm install
-
-
-Run the app:
-
-npm start
-
-
-Open http://localhost:3000
- in your browser to see the app in action.
-
-Future Improvements
-
-Integration with live backend/API for real-time job data
-
-User authentication & profile management
-
-Save favorite jobs & apply directly from the platform
-
-Dark mode support
-
-License
-
-This project is open-source and available for free to use, modify, and distribute.
+## 📂 Project Structure
