@@ -1,0 +1,133 @@
+:root {
+  --brand-red: #ff2e2e;
+}
+
+/* PAGE */
+.applicants-page {
+  background: linear-gradient(135deg, #1f1f26, #2b2b38);
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
+
+/* TITLE */
+.applicants-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.8rem;
+}
+
+/* GRID */
+.applicants-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* CARD */
+.applicant-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 1.2rem 1.1rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.applicant-card:hover {
+  transform: translateY(-3px);
+}
+
+/* TEXT */
+.applicant-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.applicant-email {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  word-break: break-word;
+}
+
+.applicant-job {
+  font-size: 0.85rem;
+}
+
+.applicant-job span {
+  color: var(--brand-red);
+  font-weight: 600;
+}
+
+.applicant-msg {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.applicant-date {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
+/* EMPTY */
+.applicants-empty {
+  text-align: center;
+  opacity: 0.7;
+  margin-top: 2rem;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .applicants-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .applicants-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .applicants-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .applicant-card {
+    padding: 1rem;
+  }
+
+  .applicant-name {
+    font-size: 1rem;
+  }
+
+  .applicant-email,
+  .applicant-job,
+  .applicant-msg {
+    font-size: 0.82rem;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 420px) {
+  .applicants-page {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .applicants-title {
+    font-size: 1.4rem;
+  }
+
+  .applicant-card {
+    border-radius: 12px;
+  }
+}
